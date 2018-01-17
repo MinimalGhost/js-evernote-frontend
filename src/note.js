@@ -11,7 +11,7 @@ class Note {
     return `
       <h2>Title: ${this.title}</h2>
       <p>Body: ${this.body}</p>
-      <button id="note-${this.id}" class="delete-note">Delete Note</button>
+      <button id="${this.id}" class="delete-note">Delete Note</button>
     `
   }
 }
