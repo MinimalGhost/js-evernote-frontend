@@ -1,7 +1,7 @@
-let noteId = 0
+
 class Note {
   constructor(json) {
-    this.id = ++noteId;
+    this.id = json.id;
     this.userId = userId
     this.title = json.title;
     this.body = json.body;
@@ -11,7 +11,7 @@ class Note {
     return `
       <h2>Title: ${this.title}</h2>
       <p>Body: ${this.body}</p>
-      <button id="${this.id}" class="delete-note">Delete Note</button>
+      <button id="note-${this.id}" class="delete-note">Delete Note</button>
     `
   }
 }

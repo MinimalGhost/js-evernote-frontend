@@ -56,25 +56,25 @@ document.addEventListener('DOMContentLoaded', () => {
       })
   }
 
-  // let deleteButton = document.getElementById(`${n.id}`)
-  // deleteButton.addEventListener("click", deleteNote)
-  // function deleteNote(event) {
-  //   event.preventDefault();
-  //
-  //   fetch('http://localhost:3000/api/v1/notes', {
-  //     method: 'DELETE',
-  //     headers: {
-  //       'Content-Type': 'application/json', // what kind of data am i sending?
-  //       'Accept': 'application/json' // what kind of data do i want back?
-  //     },
-  //     body: JSON.stringify({ //pass the data
-  //       title: newNoteTitle,
-  //       body: newNoteBody
-  //     })
-  //   }).then(res => res.json())
-  //     .then(noteData => {
-  //     const note = new Note(noteData)
-  //       note.remove();
-  //     })
-  // }
+  let deleteButton = document.getElementById(`${n.id}`)
+  deleteButton.addEventListener("click", deleteNote)
+  function deleteNote(event) {
+    event.preventDefault();
+
+    fetch('http://localhost:3000/api/v1/notes', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json', // what kind of data am i sending?
+        'Accept': 'application/json' // what kind of data do i want back?
+      },
+      body: JSON.stringify({ //pass the data
+        title: newNoteTitle,
+        body: newNoteBody
+      })
+    }).then(res => res.json())
+      .then(noteData => {
+      const note = new Note(noteData)
+        note.remove();
+      })
+  }
 });
