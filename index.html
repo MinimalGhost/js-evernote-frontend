@@ -7,11 +7,23 @@
     <script type="text/javascript" src="src/note.js"></script>
     <script type="text/javascript" src="src/user.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
-    <script type="text/javascript" src="src/app.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="notes">
+
+        <h3>Add New Note</h3>
+        <form id="postData" action="index.html" method="post">
+          <label for="title">Title</label>
+          <br>
+          <input id="new-title" type="text" name="title">
+          <br>
+          <br>
+          <label for="body">Body</label>
+          <textarea id="new-body" name="body" rows="8" cols="80"></textarea>
+          <button id="new-note-button"type="submit" name="button" value="SEND POST">Submit</button>
+        </form>
+
         <ul class="note-list">
           <!-- notes populate here -->
         </ul>
