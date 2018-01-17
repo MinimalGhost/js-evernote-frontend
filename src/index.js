@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function displayNotes(n) {
     let noteList = document.querySelector('.note-list');
-    let li = document.createElement('li');
-    li.innerHTML = n.title;
-    noteList.appendChild(li);
-    li.addEventListener('click', function(e) {
+    let p = document.createElement('p');
+    p.innerHTML = n.title;
+    noteList.appendChild(p);
+    p.addEventListener('click', function(e) {
       spotlightNote(n);
     })
     form.reset();
@@ -33,9 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function newNote(event) {
     event.preventDefault();
-    // const newNoteListId = document.getElementById()
-    const newNoteTitle = document.getElementById('new-title').value;
-    const newNoteBody = document.getElementById('new-body').value;
+    let newNoteTitle = document.getElementById('new-title').value;
+    let newNoteBody = document.getElementById('new-body').value;
 
     fetch('http://localhost:3000/api/v1/notes', {
       method: 'POST',

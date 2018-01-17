@@ -10,19 +10,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="notes">
-
+      <div class="new-note">
         <h3>Add New Note</h3>
         <form id="postData" action="index.html" method="post">
           <label for="title">Title</label>
-          <br>
           <input id="new-title" type="text" name="title">
-          <br>
-          <br>
           <label for="body">Body</label>
-          <textarea id="new-body" name="body" rows="8" cols="80"></textarea>
+          <input id="new-body" type="text" name="body"></textarea>
           <button id="new-note-button"type="submit" name="button" value="SEND POST">Submit</button>
         </form>
+      </div>
+      <div class="notes">
 
         <ul class="note-list">
           <!-- notes populate here -->
