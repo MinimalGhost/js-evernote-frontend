@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function displayNotes(n) {
     let noteList = document.querySelector('.note-list');
-    let p = document.createElement('p');
-
+    // let p = document.createElement('p');
+    // p.id = `${n.id}`;
     p.innerHTML = n.title;
     noteList.appendChild(p);
     p.addEventListener('click', function(e) {
@@ -59,10 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
       })
   }
 
+  function remove(array, element) {
+    const index = array.indexOf(element);
+    array.splice(index, 1);
+  }
+
   function deleteNote(event) {
     event.preventDefault();
-    // let listP = document.querySelector(`${this.id}`)
-
+    // let listP = document.getElementById(`${this.id}`)
+    // listP.remove();
+    // remove(Note.all, )
+    Note.all.find(function(element) {
+      if(element.id === this.id) {
+        return element
+      }
+    })
 
     fetch(`http://localhost:3000/api/v1/notes/${this.id}`, {
       method: 'DELETE',
