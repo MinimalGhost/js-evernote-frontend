@@ -1,0 +1,13 @@
+.notes {
+  width: 500px;
+  float: left;
+  border: 2px solid black;
+  padding: 20px 20px 20px 10px;
+}
+
+.note-spotlight {
+  width: 500px;
+  height: 500px;
+  float: right;
+  border: 2px solid black;
+}
